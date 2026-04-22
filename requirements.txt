@@ -4,7 +4,9 @@ charset-normalizer==3.4.7
 Django==6.0.4
 djangorestframework==3.17.1
 Faker==40.15.0
+gunicorn==25.3.0
 idna==3.12
+packaging==26.1
 psycopg2-binary==2.9.12
 python-decouple==3.8
 requests==2.33.1
