@@ -1,0 +1,37 @@
+# Python - Archivos compilados y caché
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Entornos Virtuales (¡Muy importante!)
+venv/
+env/
+ENV/
+.env/
+.venv/
+
+# Base de datos local (SQLite)
+# Se ignora para que cada desarrollador tenga su propia data de prueba
+db.sqlite3
+db.sqlite3-journal
+
+# Configuraciones de editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de entorno y secretos
+.env
+.flaskenv
+local_settings.py
+
+# Archivos de logs
+*.log
+
+# Estáticos y Media (opcional, pero recomendado)
+# Descomenta si planeas subir imágenes y no quieres que se guarden en Git
+# media/
+# static/
