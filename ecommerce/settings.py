@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -137,3 +138,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Esto ayuda a WhiteNoise a servir los archivos de forma eficiente
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CORS_ALLOWED_ORIGINS = [
+
+    "http://localhost:5173", # Tu Vue en local
+
+    "https://tu-frontend.vercel.app"
+
+    ]
