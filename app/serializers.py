@@ -1,3 +1,4 @@
+# serializers.py
 from rest_framework import serializers
 from .models import Usuario, Producto, Pedido
 
@@ -12,7 +13,10 @@ class ProductoSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class PedidoSerializer(serializers.ModelSerializer):
-    # Esto permite ver los detalles de los productos al consultar el pedido
+    # Campos adicionales para CONSULTAR (GET)
+    usuario_nombre = serializers.ReadOnlyField(source='usuario.nombre')
+    productos_detalles = ProductoSerializer(many=True, read_only=True, source='productos')
+
     class Meta:
         model = Pedido
-        fields = '__all__'
+        fields = ['id', 'usuario', 'usuario_nombre', 'productos', 'productos_detalles', 'creado_en']
